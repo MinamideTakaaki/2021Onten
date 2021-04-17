@@ -6,8 +6,8 @@
 	<title>Scroll Trigger</title>
 </head>
 <body>
-	<div data-trigger class="translateY">あああああ</div>
-	<div data-trigger class="translateX">いいいい</div>
+	<div style="width: 100%; height: 105%; background-color: blue;"></div>
+	<div data-trigger class="translateY"></div>
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/ScrollTrigger.min.js"></script>
@@ -19,31 +19,15 @@
 		margin: unset;
 		height: 100%;
 	}
-	.translateY {
-		margin-top: 105%;
+	.translateY, .invisible {
 		width: 100%;
 		height: 50%;
 		background-color: green;
-	}
-	.translateY.invisible {
-	    opacity: 0.0;
-	    transition: opacity 0.5s ease;
+		opacity: 0;
+	    transition: .5s ease;
 	}
 	.translateY.visible {
-	    opacity: 1.0;
-	}
-	.translateX {
-		/*opacity: 0.5;*/
-		width: 100%;
-		height: 50%;
-		background-color: orange;
-	}
-	.translateX.invisible {
-		opacity: 0.2;
-		transition: 0.5s ease;
-	}
-	.translateX.visible {
-		opacity: 1.0;
+	    opacity: 1;
 	}
 </style>
 </html>
