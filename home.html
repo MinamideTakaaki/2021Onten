@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon">
+	<title>Document</title>
+</head>
+<body>
+	<nav>
+		<ul>
+			<li><a href="home.html" accesskey="H"><img src="png/koyo_high_logo01.png" alt=""></a></li>
+			<li><a href="#" accesskey="M">Map</a></li>
+			<li><a href="#" accesskey="T">Timetable</a></li>
+			<li><a href="#" accesskey="S">School View</a></li>
+			<li><a href="#" accesskey="I">Information</a></li>
+		</ul>
+	</nav>
+	<a href="#" accesskey="H"><div class="hdtitle"></div></a>
+	<a href="#" accesskey="M" style="color: rgb(255, 255, 255);"><div class="hdmap">Map</div></a>
+	<a href="#" accesskey="T"><div class="hdtimet">Timetable</div></a>
+	<a href="#" accesskey="S"><div class="hdsview">School View</div></a>
+	<a href="#" accesskey="I" style="color: rgb(255, 255, 255);"><div class="hdinfo">Information</div></a>
+	<div class="hdboothes">
+		<span href="#" class="hdat" style="">Booth</span>
+		<a href="#"><div class="booth"><div class="trgle">生物部</div></div></a>
+		<a href="#"><div class="booth"><div class="trgle">化学部</div></div></a>
+		<a href="#"><div class="booth"><div class="trgle">音楽部</div></div></a>
+		<a href="#"><div class="booth"><div class="trgle">アンサンブル部</div></div></a>
+		<a href="#"><div class="booth"><div class="trgle">写真部</div></div></a>
+		<a href="#"><div class="booth"><div class="trgle">グリー部</div></div></a>
+		<a href="#"><div class="booth"><div class="trgle">文藝部</div></div></a>
+		<a href="#"><div class="booth"><div class="trgle">写真部</div></div></a>
+		<a href="#"><div class="booth"><div class="trgle">地歴部</div></div></a>
+		<a href="#"><div class="booth"><div class="trgle">美術部</div></div></a>
+		<a href="#"><div class="booth"><div class="trgle">将棋部</div></div></a>
+		<a href="#"><div class="booth"><div class="trgle">天文部</div></div></a>
+		<a href="#"><div class="booth"><div class="trgle">E.S.S.</div></div></a>
+	</div>
+</body>
+<style type="text/css">
+	@font-face {
+		font-family: 'Rafale';
+		src: url(fonts/Rafale-BG.otf);
+	}
+	html, body {
+		height: 100%;
+		margin: unset;
+		font-family: 'Rafale';
+	}
+	nav {
+		width: 100%;
+		height: 44px;
+		background-color: rgba(51, 51, 51, .99);
+		position: fixed;
+		z-index: 2;
+	}
+	nav ul {
+		width: 80%;
+		margin: 0 auto;
+		overflow: hidden;
+		list-style: none;
+		padding: unset;
+	}
+	nav li {
+		width: 20%;
+		height: 44px;
+		float: left;
+		text-align: center;
+	}
+	nav a {
+		color: rgb(214, 214, 214);
+		text-decoration: none;
+		font-size: 16px;
+		line-height: 44px;
+		display: block;
+	}
+	nav img {
+		box-sizing: border-box;
+		height: 44px;
+		border: 10px solid rgba(255, 255, 255, 0);
+	}
+
+	.hdtitle {
+		width: 55%;
+		height: 90%;
+		float: left;
+		box-sizing: border-box;
+		border: .4vw solid white;
+		margin-top: 44px;
+    	background: rgb(251, 251, 253) 50% 80% / contain no-repeat url(png/koyo_high00.png);
+	}
+	.hdmap, .hdtimet, .hdinfo, .hdboothes, .hdsview {
+		color: rgb(29, 29, 31);
+		font-size: 3.5vw;
+		box-sizing: border-box;
+		border: .4vw solid white;
+		float: left;
+		padding: 1vw;
+	}
+	.hdmap {
+		width: 22.5%;
+		height: 45%;
+		background-color: rgb(0, 0, 0);
+		margin-top: 44px;
+		color: rgb(255, 255, 255);
+	}
+	.hdtimet {
+		width: 22.5%;
+		height: 45%;
+		background-color: rgb(251, 251, 253);
+		margin-top: 44px;
+	}
+	.hdinfo {
+		width: 100%;
+		height: 70%;
+		background-color: rgb(0, 0, 0);
+		color: rgb(255, 255, 255);
+	}
+	.hdboothes {
+		width: 100%;
+		height: 80%;
+		background-color: rgb(251, 251, 253);
+	}
+	.hdsview {
+		width: 45%;
+		height: 45%;
+		background-color: rgb(251, 251, 253);
+	}
+	.hdat {
+		display: block;
+		margin-bottom: 2vh;
+	}
+	.trgle {
+		height: 8vw;
+		width: 12.9vw;
+    	background: linear-gradient(to top left, rgba(255,255,255,0) 50%, blue 51%);
+    	color: orange;
+    	line-height: 3vw;
+    	font-size: 20px;
+    	position: absolute;
+    	padding: 3px;
+	}
+	.booth {
+		width: calc(100% / 7);
+		height: 15vw;
+		background-color: green;
+		box-sizing: border-box;
+		position: relative;
+		border: .3vw solid white;
+		float: left;
+	}
+</style>
+</html>

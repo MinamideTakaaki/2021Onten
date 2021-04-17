@@ -1,0 +1,55 @@
+<svg width="600" height="600" viewBox="0, 0, 600, 600" xmlns="http://www.w3.org/2000/svg">
+	<g>
+		<rect x="10" y="10" width="12" height="12" fill="gray" />
+		<rect x="26" y="10" width="12" height="12" fill="gray" />
+		<rect x="42" y="10" width="12" height="12" fill="gray" />
+		<!-- 1段目 -->
+		<rect x="10" y="26" width="12" height="12" fill="gray" />
+		<rect x="26" y="26" width="12" height="12" fill="gray" />
+		<rect x="42" y="26" width="12" height="12" fill="gray" />
+		<!-- 2段目 -->
+		<rect x="10" y="42" width="12" height="12" fill="gray" />
+		<rect x="26" y="42" width="12" height="12" fill="gray" />
+		<rect x="42" y="42" width="12" height="12" fill="gray" />
+		<!-- 3段目 -->
+	</g>
+
+	<g>
+		<rect x="100" y="10" width="45" height="7" fill="gray" />
+		<rect x="100" y="26" width="45" height="7" fill="gray" />
+		<rect x="100" y="42" width="45" height="7" fill="gray" />
+	</g>
+
+	<g>
+		<rect x="195" y="10" width="50" height="7" fill="gray" />
+		<rect x="200" y="26" width="40" height="7" fill="gray" />
+		<rect x="205" y="42" width="30" height="7" fill="gray" />
+	</g>
+
+	<g>
+		<circle cx="300" cy="10" r="5" fill="gray" />
+		<circle cx="300" cy="22" r="5" fill="gray" />
+		<circle cx="300" cy="34" r="5" fill="gray" />
+	</g>
+
+	<g>
+		<circle cx="400" cy="20" r="5" fill="gray" />
+		<circle cx="412" cy="20" r="5" fill="gray" />
+		<circle cx="424" cy="20" r="5" fill="gray" />
+	</g>
+
+	<g>
+		<rect x="500" y="10" height="12" width="8" fill="gray" />
+		<rect x="512" y="10" height="12" width="8" fill="gray" />
+		<rect x="524" y="10" height="12" width="8" fill="gray"></rect>
+		<rect x="536" y="10" height="12" width="8" fill="gray"></rect>
+		<rect x="500" y="26" height="12" width="8" fill="gray"></rect>
+		<rect x="512" y="26" height="12" width="8" fill="gray"></rect>
+		<rect x="524" y="26" height="12" width="8" fill="gray"></rect>
+		<rect x="536" y="26" height="12" width="8" fill="gray"></rect>
+		<rect x="500" y="42" height="12" width="8" fill="gray"></rect>
+		<rect x="512" y="42" height="12" width="8" fill="gray"></rect>
+		<rect x="524" y="42" height="12" width="8" fill="gray"></rect>
+		<rect x="536" y="42" height="12" width="8" fill="gray"></rect>
+	</g>
+</svg>

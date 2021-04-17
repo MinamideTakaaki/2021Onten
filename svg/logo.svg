@@ -1,0 +1,8 @@
+<svg width="550" height="860" viewBox="0, 0, 550, 860" xmlns="http://www.w3.org/2000/svg">
+<polygon points="0,0 550,0 550,80 0,80" style="fill: rgb(184, 151, 106);"></polygon>　<!-- 上 -->
+<polygon points="50, 80 100, 80 75, 780 25, 780" style="fill: rgb(221, 33, 42);"></polygon>　<!-- 赤 -->
+<polygon points="150, 80 200, 80 250, 780 200, 780" style="fill: rgb(44, 46, 118);"></polygon>　<!-- 紺 -->
+<polygon points="325, 80 375, 80 350, 780 300, 780" style="fill: rgb(240, 205, 61);"></polygon>　<!-- 黄 -->
+<polygon points="425, 80 475, 80 525, 780 475, 780" style="fill: rgb(59, 155, 109);"></polygon>　<!-- 緑 -->
+<polygon points="0, 780 550, 780 550, 860 0, 860" style="fill: rgb(184, 151, 106);"></polygon>　<!-- 下 -->
+</svg>

@@ -1,0 +1,16 @@
+<svg width="44" height="44" viewBox="0, 0, 44, 44" xmlns="http://www.w3.org/2000/svg">
+	<g>
+		<rect x="0" y="0" width="12" height="12" fill="gray" />
+		<rect x="16" y="0" width="12" height="12" fill="gray" />
+		<rect x="32" y="0" width="12" height="12" fill="gray" />
+		<!-- 1段目 -->
+		<rect x="0" y="16" width="12" height="12" fill="gray" />
+		<rect x="16" y="16" width="12" height="12" fill="gray" />
+		<rect x="32" y="16" width="12" height="12" fill="gray" />
+		<!-- 2段目 -->
+		<rect x="0" y="32" width="12" height="12" fill="gray" />
+		<rect x="16" y="32" width="12" height="12" fill="gray" />
+		<rect x="32" y="32" width="12" height="12" fill="gray" />
+		<!-- 3段目 -->
+	</g>
+</svg>

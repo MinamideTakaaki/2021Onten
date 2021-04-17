@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Scroll Trigger</title>
+</head>
+<body>
+	<div data-trigger class="translateY">あああああ</div>
+	<div data-trigger class="translateX">いいいい</div>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/ScrollTrigger.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollTrigger/1.0.3/ScrollTrigger.min.js"></script>
+	<script src="js/ScrollTrigger.sub.js"></script>
+</body>
+<style>
+	html, body {
+		margin: unset;
+		height: 100%;
+	}
+	.translateY {
+		margin-top: 105%;
+		width: 100%;
+		height: 50%;
+		background-color: green;
+	}
+	.translateY.invisible {
+	    opacity: 0.0;
+	    transition: opacity 0.5s ease;
+	}
+	.translateY.visible {
+	    opacity: 1.0;
+	}
+	.translateX {
+		/*opacity: 0.5;*/
+		width: 100%;
+		height: 50%;
+		background-color: orange;
+	}
+	.translateX.invisible {
+		opacity: 0.2;
+		transition: 0.5s ease;
+	}
+	.translateX.visible {
+		opacity: 1.0;
+	}
+</style>
+</html>
