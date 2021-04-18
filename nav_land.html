@@ -5,20 +5,19 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="shortcut icon" href="svg/logo.svg" type="image/svg+xml">
 	<link rel="stylesheet" href="css/nav_land.css">
-	<script type="text/javascript" src="js/nav.js"></script>
+	<!-- <script type="text/javascript" src="js/nav.js"></script> -->
 	<title>nav</title>
 </head>
 <body>
 	<nav class="nav up">
-		<!-- <img src="svg/logo.svg" alt="" style="height: 45px; float: left; margin: 9.5px 2.5% 9.5px 2%;"> -->
-		<div style="height: 45px; width: 45px; float: right; margin: 9.5px 2.5% 9.5px 2%;" onclick="open()">
-			<img src="svg/ham01.svg" alt="">
-		</div>
-		
+		<img class="ham" onclick="open_m()" src="svg/ham01.svg" alt="">
 	</nav>
 
-	<div class="menu_land.open" id="menu_L">
-		
+	<div class="menu_land" id="menu_L">
+		<div style="width: 100%; height: 5%; background-color: yellow;"></div>
+		<div style="width: 100%; height: 5%; background-color: blue;"></div>
+		<div style="width: 100%; height: 5%; background-color: orange;"></div>
+		<div style="width: 100%; height: 5%; background-color: red;"></div>
 	</div>
 
 	<div style="width: 100%; height: 140%; background-image: url(img/DSCF4108.jpg); background-size: cover;"></div>
@@ -31,15 +30,13 @@
 		font-family: serif;
 	}
 </style>
+
 <script>
-	let open_m = true;
-	// function open() {
-	// 	if (open_m) {
-	// 		document.getElementById('menu_L').classList.add('.open');
-	// 	} else {}
-	// }
-	function open() {
-		console.log('a');
+	let open_judge = -1;
+	function open_m() {
+		if (open_judge === -1) document.getElementById('menu_L').classList.add('open');
+		else document.getElementById('menu_L').classList.remove('open');
+		open_judge*=-1;
 	}
 </script>
 </html>
