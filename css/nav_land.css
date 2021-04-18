@@ -1,16 +1,61 @@
 /* landscape */
+nav {
+	width: 100%;
+	background-color: rgba(255, 255, 255, .95);
+	position: fixed;
+	z-index: 10;
+	box-shadow: 0 0 5px 0 rgb(0 0 0 / 25%);
+	font-family: sans-serif;
+}
+.ham {
+	float: right;
+}
+.ham_onMenu {
+	height: 7%;
+	float: right;
+	margin: 1% 2.5% 0 0;
+}
 .menu_land {
 	width: 100%;
-	height: 400px;
+	height: 0;
 	position: fixed;
-	top: -400px;
+	background-color: green;
+	transition: .6s ease;
+	z-index: 15;
+}
+
+.ham.on_menu {
+	display: block;
 }
 @media (orientation: portrait){
 	/* 縦長 */
-	nav > img, ul {
-		display: none;
+	nav {
+		height: 100px;
+	}
+	.ham {
+		height: 60px;
+		margin: 20px;
+	}
+	.menu_land {
+		top: 100px;
+	}
+	.menu_land.open {
+		height: calc(100vh - 100px);
 	}
 }
 @media (orientation: landscape){
 	/* 横長 */
+	nav {
+		height: 64px;
+	}
+	.ham {
+		height: 45px;
+		margin: 9.5px 2.5% 9.5px 2%;
+	}
+	.menu_land {
+		top: 64px;
+	}
+	.menu_land.open {
+		height: calc(100vh - 64px);
+	}
 }

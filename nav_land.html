@@ -9,35 +9,17 @@
 	<title>nav</title>
 </head>
 <body>
+	<nav class="nav up">
+		<!-- <img src="svg/logo.svg" alt="" style="height: 45px; float: left; margin: 9.5px 2.5% 9.5px 2%;"> -->
+		<div style="height: 45px; width: 45px; float: right; margin: 9.5px 2.5% 9.5px 2%;" onclick="open()">
+			<img src="svg/ham01.svg" alt="">
+		</div>
+		
+	</nav>
 
-	<div class="menu_land">
+	<div class="menu_land.open" id="menu_L">
 		
 	</div>
-
-	<!-- <div onclick="linkShow(false)" class="blur hide"></div> -->
-
-	<!-- <div class="link_box hide" id="Lmap">
-		<div class="box_image" style="background-image: url(img/kokokosha1.jpg);"></div>
-	</div>
-	<div class="link_box hide" id="Ltime">
-		<div class="box_image" style="background-image: url(img/kokokosha2.jpg);"></div>
-		<div class="box_links">
-			<a href="#" class="box_link">タイムテーブル</a>
-			<a href="#" class="box_link">音楽会</a>
-			<a href="#" class="box_link">中央ステージ</a>
-			<a href="#" class="box_link">バンド</a>
-			<a href="#" class="box_link">展示</a>
-		</div>
-	</div>
-	<div class="link_box hide" id="Lbooth">
-		<div class="box_image" style="background-image: url(img/DSCF4108.jpg);"></div>
-		<div class="box_links">
-			<div class="box_link" onclick="childShow('bukatu')">部活展示</div>
-			<div class="box_link" onclick="childShow('kikaku')">音展企画</div>
-		</div>
-		<div class="child hide" id="child_bukatu"></div>
-		<div class="child hide" id="child_kikaku" style="background-color: yellow;"></div>
-	</div> -->
 
 	<div style="width: 100%; height: 140%; background-image: url(img/DSCF4108.jpg); background-size: cover;"></div>
 	<div style="width: 100%; height: 80%; background-color: orange;"></div>
@@ -49,4 +31,15 @@
 		font-family: serif;
 	}
 </style>
+<script>
+	let open_m = true;
+	// function open() {
+	// 	if (open_m) {
+	// 		document.getElementById('menu_L').classList.add('.open');
+	// 	} else {}
+	// }
+	function open() {
+		console.log('a');
+	}
+</script>
 </html>
