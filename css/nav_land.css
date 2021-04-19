@@ -30,7 +30,7 @@ nav {
 @media (orientation: portrait){
 	/* 縦長 */
 	nav {
-		height: 100px;
+		height: 10vh;
 	}
 	.ham {
 		height: 60px;
