@@ -30,17 +30,17 @@ nav {
 @media (orientation: portrait){
 	/* 縦長 */
 	nav {
-		height: 10vh;
+		height: 5vh;
 	}
 	.ham {
 		height: 60px;
 		margin: 20px;
 	}
 	.menu_land {
-		top: 100px;
+		top: 5vh;
 	}
 	.menu_land.open {
-		height: calc(100vh - 100px);
+		height: calc(100vh - 5vh);
 	}
 }
 @media (orientation: landscape){
