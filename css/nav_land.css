@@ -57,7 +57,7 @@ nav {
 	.menu_land {
 		top: 64px;
 	}
-	.menu_land.open {
+	#menu-inp:checked ~ .menu_land {
 		height: calc(100vh - 64px);
 	}
 }
