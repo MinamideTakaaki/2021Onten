@@ -1,7 +1,8 @@
 /* landscape */
 nav {
 	width: 100%;
-	background: linear-gradient(90deg, rgba(207, 255, 207, .95), rgba(93, 173, 58, .95));
+	background: linear-gradient(90deg, rgba(207, 255, 207, .95), rgba(119, 165, 39, .95));
+	/* ちょっと薄い rgba(93, 173, 58, .95) ちょっと濃い rgba(119, 165, 39, .95) */
 	position: fixed;
 	z-index: 10;
 	box-shadow: 0 0 5px 0 rgb(0 0 0 / 25%);
@@ -19,7 +20,9 @@ nav {
 	width: 100%;
 	height: 0;
 	position: fixed;
-	background-color: green;
+	/*background: linear-gradient(90deg, rgb(207, 255, 207), rgb(119, 165, 39));*/
+	background-color: rgba(119, 165, 39, .95);
+	/*background-color: white;*/
 	transition: .6s ease;
 	z-index: 15;
 }
