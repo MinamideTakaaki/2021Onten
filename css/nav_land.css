@@ -1,7 +1,7 @@
 /* landscape */
 nav {
 	width: 100%;
-	background: linear-gradient(-135deg, rgba(127, 150, 0, .95), rgba(255, 255, 255, .95));
+	background: linear-gradient(90deg, rgba(207, 255, 207, .95), rgba(45, 209, 42, .95));
 	position: fixed;
 	z-index: 10;
 	box-shadow: 0 0 5px 0 rgb(0 0 0 / 25%);
