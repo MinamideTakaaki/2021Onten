@@ -9,17 +9,54 @@
 </head>
 <body>
 	<nav class="nav up">
-		<input type="checkbox" id="menu-inp">
-		<label for="menu-inp" class="menu-btn">
-			<img class="ham" src="svg/ham01.svg" alt="">
-		</label>
-		<div class="menu_land" id="menu_L">
-			<!-- <div style="width: 100%; height: 5%; background-color: yellow;"></div> -->
-			<!-- <div style="width: 100%; height: 5%; background-color: blue;"></div> -->
-			<!-- <div style="width: 100%; height: 5%; background-color: orange;"></div> -->
-			<!-- <div style="width: 100%; height: 5%; background-color: red;"></div> -->
-		</div>
+		<img class="ham" src="svg/ham01.svg" alt="" onclick="open_menu()">
 	</nav>
+	<div class="menu_land" id="menu_L">
+		<ul>
+			<li>
+				<a href="home.html">
+					<span class="li_e">Home</span>
+					<hr class="li_bar">
+					<span class="li_j">ホーム</span>
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<span class="li_e">Map</span>
+					<hr class="li_bar">
+					<span class="li_j">校内マップ</span>
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<span class="li_e">Timetable</span>
+					<hr class="li_bar">
+					<span class="li_j">タイムテーブル</span>
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<span class="li_e">School View</span>
+					<hr class="li_bar">
+					<span class="li_j">スクールビュー</span>
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<span class="li_e">Information</span>
+					<hr class="li_bar">
+					<span class="li_j">お知らせ</span>
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<span class="li_e">Booth</span>
+					<hr class="li_bar">
+					<span class="li_j">団体</span>
+				</a>
+			</li>
+		</ul>
+	</div>
 
 	<div style="width: 100%; height: 140%; background-image: url(img/IMG_0741.JPG); background-size: cover;"></div>
 	<div style="width: 100%; height: 80%; background-color: orange;"></div>
@@ -31,4 +68,12 @@
 		font-family: serif;
 	}
 </style>
+<script>
+	let open_judge = -1;
+	function open_menu() {
+		if (open_judge === -1) document.getElementById('menu_L').classList.add('open');
+		else document.getElementById('menu_L').classList.remove('open');
+		open_judge*=-1;
+	}
+</script>
 </html>
