@@ -19,9 +19,8 @@ ul > li > a {
 	margin: 0 auto 0;
 	width: 80vw;
 	display: flex;
-	height: 8vh;
+	height: 7vh;
 	align-items: center;
-	/*font-size: 2.5vh;*/
 	text-decoration: none;
 	color: rgb(0, 0, 0);
 	border-bottom: 1px solid rgb(0, 0, 0);
@@ -36,7 +35,7 @@ ul > li:last-child {
 	font-family: 'Rafale';
 	flex-shrink: 0;
 	margin: 0 3vw 0;
-	font-size: 2.5vh;
+	font-size: 4vw;
 }
 .li_bar {
 	background-color: rgb(0, 0, 0);
@@ -46,8 +45,12 @@ ul > li:last-child {
 }
 .li_j {
 	flex-shrink: 0;
-	margin: 0 3vw 0;
-	font-size: 2vh;
+	margin: 0 0 0 3vw;
+	font-size: 2vw;
+}
+.li_trg {
+	width: 2vw;
+	margin: 0 1vw 0;
 }
 .menu_land {
 	width: 100%;
@@ -60,6 +63,9 @@ ul > li:last-child {
 }
 .menu_land.open {
 	clip-path: inset(0 0 0 0);
+}
+body.open {
+	overflow: hidden;
 }
 #menu-inp {
 	display: none;

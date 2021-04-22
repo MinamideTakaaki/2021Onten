@@ -25,6 +25,7 @@
 					<span class="li_e">Map</span>
 					<hr class="li_bar">
 					<span class="li_j">校内マップ</span>
+					<img class="li_trg" id="trg_li_map" src="svg/sankaku.svg">
 				</a>
 			</li>
 			<li>
@@ -75,8 +76,14 @@
 <script>
 	let open_judge = -1;
 	function open_menu() {
-		if (open_judge === -1) document.getElementById('menu_L').classList.add('open');
-		else document.getElementById('menu_L').classList.remove('open');
+		if (open_judge === -1) {
+			document.getElementById('menu_L').classList.add('open');
+			document.querySelector('body').classList.add('open');
+		}
+		else {
+			document.getElementById('menu_L').classList.remove('open');
+			document.querySelector('body').classList.remove('open');
+		}
 		open_judge*=-1;
 	}
 </script>
