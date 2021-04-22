@@ -21,13 +21,17 @@
 				</a>
 			</li>
 			<li>
-				<a href="">
+				<div onclick="port_link_child('map')">
 					<span class="li_e">Map</span>
 					<hr class="li_bar">
 					<span class="li_j">校内マップ</span>
 					<img class="li_trg" id="trg_li_map" src="svg/sankaku.svg">
-				</a>
+				</div>
 			</li>
+			<div id="ul_div_map">
+				<a href="">南校舎1階</a>
+				<a href="">いいい</a>
+			</div>
 			<li>
 				<a href="">
 					<span class="li_e">Timetable</span>
@@ -74,7 +78,7 @@
 	}
 </style>
 <script>
-	let open_judge = -1;
+	let open_judge = -1, child_judge = -1;
 	function open_menu() {
 		if (open_judge === -1) {
 			document.getElementById('menu_L').classList.add('open');
@@ -85,6 +89,15 @@
 			document.querySelector('body').classList.remove('open');
 		}
 		open_judge*=-1;
+	}
+
+	function port_link_child(child_name) {
+		if (child_judge === -1) {
+			document.getElementById(`ul_div_${child_name}`).classList.add('open');
+		} else {
+			document.getElementById(`ul_div_${child_name}`).classList.remove('open');
+		}
+		child_judge*=-1;
 	}
 </script>
 </html>
