@@ -28,7 +28,7 @@
 					<img class="li_trg" id="trg_li_map" src="svg/sankaku.svg">
 				</div>
 			</li>
-			<div class="ul_div" id="ul_div_map">
+			<div class="ul_div close" id="ul_div_map">
 				<a href="">南校舎1階</a>
 				<a href="">南校舎2階</a>
 				<a href="">北校舎1階</a>
@@ -48,28 +48,14 @@
 				</a>
 			</li>
 			<li>
-				<a href="">
-					<span class="li_e">Information</span>
-					<hr class="li_bar">
-					<span class="li_j">お知らせ</span>
-				</a>
-			</li>
-			<!-- <li>
-				<a href="" style="border: 0;">
-					<span class="li_e">Booth</span>
-					<hr class="li_bar">
-					<span class="li_j">団体</span>
-				</a>
-			</li> -->
-			<li>
-				<div onclick="port_link_child('booth')">
+				<div class="div_booth" onclick="port_link_child('booth')">
 					<span class="li_e">Booth</span>
 					<hr class="li_bar">
 					<span class="li_j">団体</span>
 					<img class="li_trg" id="trg_li_map" src="svg/sankaku.svg">
 				</div>
 			</li>
-			<div class="ul_div" id="ul_div_booth">
+			<div class="ul_div close" id="ul_div_booth">
 				<a href="">生物部</a>
 				<a href="">化学部</a>
 				<a href="">物理部</a>
@@ -80,6 +66,13 @@
 				<a href="">将棋部</a>
 				<a href="">クイズ同好会</a>
 			</div>
+			<li>
+				<a href="" style="border: 0;">
+					<span class="li_e">Information</span>
+					<hr class="li_bar">
+					<span class="li_j">お知らせ</span>
+				</a>
+			</li>
 		</ul>
 	</div>
 
@@ -112,25 +105,17 @@
 	}
 
 	function port_link_child(child_name) {
-		// if (child_judge === -1) {
-		// 	document.getElementById(`ul_div_${child_name}`).classList.add('open');
-		// 	child_open = true;
-		// } else {
-		// 	document.getElementById(`ul_div_${child_name}`).classList.remove('open');
-		// 	child_open;
-		// }
-		// child_judge*=-1;
 		if (child_judge === false) {
-			document.getElementById(`ul_div_${child_name}`).classList.add('open');
+			document.getElementById(`ul_div_${child_name}`).classList.replace('close', 'open');
 			open_name = child_name;
 			child_judge = true;
 		} else {
 			if (child_name === open_name) {
-				document.getElementById(`ul_div_${child_name}`).classList.remove('open');
+				document.getElementById(`ul_div_${child_name}`).classList.replace('open', 'close');
 				child_judge = false;
 			} else {
-				document.querySelector('.ul_div.open').classList.remove('open');
-				document.getElementById(`ul_div_${child_name}`).classList.add('open');
+				document.querySelector('.ul_div.open').classList.replace('open', 'close');
+				document.getElementById(`ul_div_${child_name}`).classList.replace('close', 'open');
 				open_name = child_name;
 				child_judge = true;
 			}

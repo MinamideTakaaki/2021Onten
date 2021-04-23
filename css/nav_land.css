@@ -25,35 +25,61 @@ ul > li > a, ul > li > div {
 	color: rgb(0, 0, 0);
 	border-bottom: 1px solid rgb(0, 0, 0);
 }
-ul > div {
-	display: none;
+.ul_div {
 	width: 80vw;
 	margin: 0 auto 0;
-	border-bottom: 1px solid rgb(0, 0, 0);
-	transition: .4s ease-out;
 }
 .ul_div.open {
-	display: block;
+	border-bottom: 1px solid rgb(0, 0, 0);
 }
-ul > div > a {
+.ul_div.close {
+	border: 0;
+}
+
+.ul_div > a {
 	display: block;
 	width: 55vw;
 	margin: 0 auto 0;
-	height: 5vh;
 	text-decoration: none;
+	color: rgb(0, 0, 0);
+}
+.ul_div.open > a {
 	border-bottom: 1px solid rgb(0, 0, 0);
 	font-size: 4vw;
+	height: 5vh;
 	line-height: 5vh;
-	color: rgb(0, 0, 0);
 	padding: 0 3vw 0;
+	animation: open .3s;
 }
-ul > div > a:last-child {
+.ul_div.close > a {
+	animation: close .3s;
+	font-size: 0;
+	height: 0;
+}
+@keyframes open {
+    from {
+        height: 0vh;
+    }
+    to {
+        height: 5vh;
+    }
+}
+@keyframes close {
+    from {
+        height: 5vh;
+    }
+    to {
+        height: 0vh;
+    }
+}
+
+.ul_div > a:last-child {
 	border: 0;
 }
 ul > li:first-child {
 	border-top: 1px solid rgb(0, 0, 0);
 }
-ul > li:last-child {
+ul {
 	border-bottom: 1px solid rgb(0, 0, 0);
 }
 .li_e {
