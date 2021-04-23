@@ -32,12 +32,12 @@ ul > div {
 	border-bottom: 1px solid rgb(0, 0, 0);
 	transition: .4s ease-out;
 }
-ul > div.open {
+.ul_div.open {
 	display: block;
 }
 ul > div > a {
 	display: block;
-	width: 70vw;
+	width: 55vw;
 	margin: 0 auto 0;
 	height: 5vh;
 	text-decoration: none;
@@ -85,6 +85,7 @@ ul > li:last-child {
 	z-index: 5;
 	box-shadow: 0 0 5px 0 rgb(0 0 0 / 25%);
 	clip-path: inset(0 0 100% 0);
+	overflow-y: auto;
 }
 .menu_land.open {
 	clip-path: inset(0 0 0 0);

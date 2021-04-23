@@ -28,10 +28,10 @@
 					<img class="li_trg" id="trg_li_map" src="svg/sankaku.svg">
 				</div>
 			</li>
-			<div id="ul_div_map">
+			<div class="ul_div" id="ul_div_map">
 				<a href="">南校舎1階</a>
-				<a href="" style="text-align: center;">南校舎2階</a>
-				<a href="" style="text-align: right;">北校舎1階</a>
+				<a href="">南校舎2階</a>
+				<a href="">北校舎1階</a>
 			</div>
 			<li>
 				<a href="">
@@ -54,13 +54,32 @@
 					<span class="li_j">お知らせ</span>
 				</a>
 			</li>
-			<li>
+			<!-- <li>
 				<a href="" style="border: 0;">
 					<span class="li_e">Booth</span>
 					<hr class="li_bar">
 					<span class="li_j">団体</span>
 				</a>
+			</li> -->
+			<li>
+				<div onclick="port_link_child('booth')">
+					<span class="li_e">Booth</span>
+					<hr class="li_bar">
+					<span class="li_j">団体</span>
+					<img class="li_trg" id="trg_li_map" src="svg/sankaku.svg">
+				</div>
 			</li>
+			<div class="ul_div" id="ul_div_booth">
+				<a href="">生物部</a>
+				<a href="">化学部</a>
+				<a href="">物理部</a>
+				<a href="">美術部</a>
+				<a href="">写真部</a>
+				<a href="">カジノ</a>
+				<a href="">鉄道同好会</a>
+				<a href="">将棋部</a>
+				<a href="">クイズ同好会</a>
+			</div>
 		</ul>
 	</div>
 
@@ -79,7 +98,7 @@
 	}
 </style>
 <script>
-	let open_judge = -1, child_judge = -1;
+	let open_judge = -1, child_judge = false, child_open = false, open_name;
 	function open_menu() {
 		if (open_judge === -1) {
 			document.getElementById('menu_L').classList.add('open');
@@ -93,12 +112,29 @@
 	}
 
 	function port_link_child(child_name) {
-		if (child_judge === -1) {
+		// if (child_judge === -1) {
+		// 	document.getElementById(`ul_div_${child_name}`).classList.add('open');
+		// 	child_open = true;
+		// } else {
+		// 	document.getElementById(`ul_div_${child_name}`).classList.remove('open');
+		// 	child_open;
+		// }
+		// child_judge*=-1;
+		if (child_judge === false) {
 			document.getElementById(`ul_div_${child_name}`).classList.add('open');
+			open_name = child_name;
+			child_judge = true;
 		} else {
-			document.getElementById(`ul_div_${child_name}`).classList.remove('open');
+			if (child_name === open_name) {
+				document.getElementById(`ul_div_${child_name}`).classList.remove('open');
+				child_judge = false;
+			} else {
+				document.querySelector('.ul_div.open').classList.remove('open');
+				document.getElementById(`ul_div_${child_name}`).classList.add('open');
+				open_name = child_name;
+				child_judge = true;
+			}
 		}
-		child_judge*=-1;
 	}
 </script>
 </html>
