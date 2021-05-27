@@ -276,8 +276,6 @@ body.open {
 #menu-inp {
 	display: none;
 }
-
-
 @media (orientation: landscape){
 	/* 横長 */
 	.ham {
@@ -297,4 +295,11 @@ body.open {
 		top: 7vh;
 		height: calc(100vh - 7vh);
 	}
+}
+/* contents */
+.content_pic {
+    width: 100%;
+    max-height: 90%;
+    vertical-align: middle;
+    object-fit: cover;
 }
