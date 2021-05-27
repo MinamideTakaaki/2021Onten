@@ -1,13 +1,13 @@
-/* portrait */
+/* landscape */
 nav {
 	width: 100%;
-	height: 64px;
 	background-color: rgba(255, 255, 255, .95);
 	position: fixed;
 	z-index: 10;
 	box-shadow: 0 0 5px 0 rgb(0 0 0 / 25%);
 	font-family: sans-serif;
 }
+
 nav ul {
 	width: 80%;
 	margin: 0 0 0 0;
@@ -150,20 +150,151 @@ nav a {
 	line-height: 2.3vw;
 	color: rgb(0, 0, 0);
 }
-
-/* landscape */
-.menu_land {
-	width: 100%;
-	height: 400px;
-	position: fixed;
-	top: -400px;
-}
 @media (orientation: portrait){
 	/* 縦長 */
-	nav > img, ul {
+	nav {
+		height: 7vh;
+	}
+	nav > ul, .nlogo {
 		display: none;
 	}
 }
+
+/* portlate */
+.ham {
+	float: right;
+}
+.menu_port ul {
+	list-style: none;
+	padding: 0;
+	margin-top: 6vh;
+}
+.menu_port ul > li > a, .menu_port ul > li > div {
+	margin: 0 auto 0;
+	width: 80vw;
+	display: flex;
+	height: 7vh;
+	align-items: center;
+	text-decoration: none;
+	color: rgb(0, 0, 0);
+	border-bottom: 1px solid rgb(0, 0, 0);
+}
+.ul_div {
+	width: 80vw;
+	margin: 0 auto 0;
+}
+.ul_div.open {
+	border-bottom: 1px solid rgb(0, 0, 0);
+}
+.ul_div.close {
+	border: 0;
+}
+
+.ul_div > a {
+	display: block;
+	width: 55vw;
+	margin: 0 auto 0;
+	text-decoration: none;
+	color: rgb(0, 0, 0);
+}
+.ul_div.open > a {
+	border-bottom: 1px solid rgb(0, 0, 0);
+	font-size: 4vw;
+	height: 5vh;
+	line-height: 5vh;
+	padding: 0 3vw 0;
+	animation: open .3s;
+}
+.ul_div.close > a {
+	animation: close .3s;
+	font-size: 0;
+	height: 0;
+}
+@keyframes open {
+    from {
+        height: 0vh;
+    }
+    to {
+        height: 5vh;
+    }
+}
+@keyframes close {
+    from {
+        height: 5vh;
+    }
+    to {
+        height: 0vh;
+    }
+}
+
+.ul_div > a:last-child {
+	border: 0;
+}
+.menu_port ul > li:first-child {
+	border-top: 1px solid rgb(0, 0, 0);
+}
+.menu_port ul {
+	border-bottom: 1px solid rgb(0, 0, 0);
+}
+.li_e {
+	font-family: 'Rafale';
+	flex-shrink: 0;
+	margin: 0 3vw 0;
+	font-size: 5vw;
+}
+.li_bar {
+	background-color: rgb(0, 0, 0);
+	border: 0;
+	width: 100%;
+	height: 1px;
+}
+.li_j {
+	flex-shrink: 0;
+	margin: 0 0 0 3vw;
+	font-size: 4vw;
+}
+.li_trg {
+	width: 2vw;
+	margin: 0 1vw 0;
+}
+.menu_port {
+	width: 100%;
+	position: fixed;
+	background-color: rgb(255, 255, 255);
+	transition: .4s ease-out;
+	z-index: 5;
+	box-shadow: 0 0 5px 0 rgb(0 0 0 / 25%);
+	clip-path: inset(0 0 100% 0);
+	overflow-y: auto;
+}
+.menu_port.open {
+	clip-path: inset(0 0 0 0);
+}
+body.open {
+	overflow: hidden;
+}
+#menu-inp {
+	display: none;
+}
+
+
 @media (orientation: landscape){
 	/* 横長 */
+	.ham {
+		display: none;
+	}
+	.menu_port {
+		display: none;
+	}
+}
+@media (orientation: portrait){
+	/* 縦長 */
+	.ham {
+		height: 4vh;
+		margin: 1.5vh;
+	}
+	.menu_port {
+		top: 7vh;
+		height: calc(100vh - 7vh);
+	}
 }

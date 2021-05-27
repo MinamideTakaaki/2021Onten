@@ -10,12 +10,12 @@ nav {
 .ham {
 	float: right;
 }
-ul {
+.menu_port ul {
 	list-style: none;
 	padding: 0;
 	margin-top: 6vh;
 }
-ul > li > a, ul > li > div {
+.menu_port ul > li > a, .menu_port ul > li > div {
 	margin: 0 auto 0;
 	width: 80vw;
 	display: flex;
@@ -76,10 +76,10 @@ ul > li > a, ul > li > div {
 .ul_div > a:last-child {
 	border: 0;
 }
-ul > li:first-child {
+.menu_port ul > li:first-child {
 	border-top: 1px solid rgb(0, 0, 0);
 }
-ul {
+.menu_port ul {
 	border-bottom: 1px solid rgb(0, 0, 0);
 }
 .li_e {
@@ -103,7 +103,7 @@ ul {
 	width: 2vw;
 	margin: 0 1vw 0;
 }
-.menu_land {
+.menu_port {
 	width: 100%;
 	position: fixed;
 	background-color: rgb(255, 255, 255);
@@ -113,7 +113,7 @@ ul {
 	clip-path: inset(0 0 100% 0);
 	overflow-y: auto;
 }
-.menu_land.open {
+.menu_port.open {
 	clip-path: inset(0 0 0 0);
 }
 body.open {
@@ -131,7 +131,7 @@ body.open {
 		height: 4vh;
 		margin: 1.5vh;
 	}
-	.menu_land {
+	.menu_port {
 		top: 7vh;
 		height: calc(100vh - 7vh);
 	}
@@ -145,7 +145,7 @@ body.open {
 		height: 45px;
 		margin: 9.5px 2.5% 9.5px 2%;
 	}
-	.menu_land {
+	.menu_port {
 		top: 64px;
 		height: calc(100vh - 64px);
 	}

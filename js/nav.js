@@ -1,5 +1,7 @@
 let link = 1;
 let cJudge = 1;
+let open_judge = -1, child_judge = false, child_open = false, open_name;
+
 document.addEventListener('DOMContentLoaded', function(){
  	let start_pos = 0;
  	window.addEventListener('scroll', function(e){
@@ -91,6 +93,38 @@ function childShow(cName) {
 			elechild.style.transition = '0s';
 			nowchild.classList.replace('show', 'hide');
 			elechild.classList.replace('hide', 'show');
+		}
+	}
+}
+
+// port
+function open_menu() {
+	console.log('port');
+	if (open_judge === -1) {
+		document.getElementById('menu_L').classList.add('open');
+		document.querySelector('body').classList.add('open');
+	}
+	else {
+		document.getElementById('menu_L').classList.remove('open');
+		document.querySelector('body').classList.remove('open');
+	}
+	open_judge*=-1;
+}
+
+function port_link_child(child_name) {
+	if (child_judge === false) {
+		document.getElementById(`ul_div_${child_name}`).classList.replace('close', 'open');
+		open_name = child_name;
+		child_judge = true;
+	} else {
+		if (child_name === open_name) {
+			document.getElementById(`ul_div_${child_name}`).classList.replace('open', 'close');
+			child_judge = false;
+		} else {
+			document.querySelector('.ul_div.open').classList.replace('open', 'close');
+			document.getElementById(`ul_div_${child_name}`).classList.replace('close', 'open');
+			open_name = child_name;
+			child_judge = true;
 		}
 	}
 }
