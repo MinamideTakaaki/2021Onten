@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>scroll</title>
+</head>
+<body>
+	<div id="p0" style="top: 4%"></div><div id="c0" style="top: 4%;">ああああああ</div>
+	<div id="p1" style="top: 10%;"></div><div id="c1" style="top: 10%;">いいいいいいいいいい</div>
+	<div id="p2" style="top: 16%;"></div><div id="c2" style="top: 16%;">ううううううううううううう</div>
+	<div class="d" id="d0"></div>
+	<div class="d" id="d1" style="background-color: orange;"></div>
+	<div class="d" id="d2"></div>
+	<div class="printer"></div>
+</body>
+<style type="text/css">
+	html, body {
+		height: 100%;
+		margin: unset;
+	}
+	.d {
+		width: 100%;
+		height: 100%;
+		background-color: green;
+	}
+	#p0, #p1, #p2 {
+		height: 4vh;
+		width: .2vw;
+		background-color: white;
+		left: 2%;
+		z-index: 2;
+		position: fixed;
+		border-radius: 4px;
+	}
+	#c0, #c1, #c2 {
+		/*height: 5%;*/
+		line-height: 5vh;
+		float: left;
+		clear: left;
+		position: fixed;
+		left: 3%;
+		display: none;
+		font-size: .5vw;
+	}
+</style>
+<script type="text/javascript">
+	let h = window.innerHeight;
+	let y = window.scrollY;
+	let where = 0;
+	window.addEventListener("resize", (e) => {
+		h = window.innerHeight;
+	})
+	document.getElementById(`p${where}`).style.backgroundColor = "black";
+	document.getElementById(`c${where}`).style.display = "block";
+	document.addEventListener("scroll", (e) => {
+		let y = window.scrollY;
+		document.getElementById(`p${where}`).style.backgroundColor = "white";
+		document.getElementById(`c${where}`).style.display = "none";
+		where = Math.floor(y/h);
+		document.getElementById(`p${where}`).style.backgroundColor = "black";
+		document.getElementById(`c${where}`).style.display = "block";
+	});
+
+	document.addEventListener('DOMContentLoaded', function(){
+ 		let start_pos = 0;
+ 		const ele = document.querySelector(".printer");
+
+ 		window.addEventListener('scroll', function(e){
+	      	let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      		let current_pos =scrollTop;
+
+	    	if (current_pos > start_pos) {
+	        	ele.classList.add('down');
+      		}else{
+        		ele.classList.add('up');
+      		}
+      		start_pos = current_pos;
+  		});
+	});
+</script>
+</html>
