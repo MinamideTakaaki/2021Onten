@@ -304,3 +304,32 @@ body.open {
     vertical-align: middle;
     object-fit: cover;
 }
+.pic_link {
+	display:  block;
+	text-decoration: none;
+	float: left;
+	box-sizing: border-box;
+}
+.pic_link > img {
+	width: 100%;
+	height: auto;
+	vertical-align: middle;
+}
+.pic_link > div {
+	width: 100%;
+	background-color: yellow;
+	box-sizing: border-box;
+}
+@media (orientation: landscape){
+	/* 横長 */
+	.pic_link {
+		width: calc(100% / 3);
+		border-style: solid;
+		border-color: white;
+		border-width: .5vw;
+	}
+	.pic_link > div {
+		height: 30%;
+		padding: 2vh 1vw 2vh 1vw;
+	}
+}
