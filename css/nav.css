@@ -8,6 +8,7 @@ nav {
 	font-family: sans-serif;
 }
 
+
 nav ul {
 	width: 80%;
 	margin: 0 0 0 0;
@@ -298,11 +299,23 @@ body.open {
 }
 
 /* contents */
-.content_pic {
+.title_box {
+	width: 100%;
+	position: relative;
+}
+.t_pic {
     width: 100%;
-    max-height: 90%;
+    max-height: 90vh;
     vertical-align: middle;
     object-fit: cover;
+}
+.pic_word {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-ms-trasform: translate(-50%, -50%);
+	-webkit-transform:  translate(-50%, -50%);
+	transform: translate(-50%. -50%);
 }
 .pic_link {
 	display:  block;
@@ -319,6 +332,7 @@ body.open {
 	width: 100%;
 	background-color: yellow;
 	box-sizing: border-box;
+	font-family: 'Rafale';
 }
 @media (orientation: landscape){
 	/* 横長 */
@@ -329,7 +343,7 @@ body.open {
 		border-width: .5vw;
 	}
 	.pic_link > div {
-		height: 30%;
 		padding: 2vh 1vw 2vh 1vw;
+		font-size: 3vh;
 	}
 }
