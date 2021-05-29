@@ -325,7 +325,8 @@ body.open {
 }
 .pic_link > img {
 	width: 100%;
-	height: auto;
+	max-height: 25vh;
+	object-fit: cover;
 	vertical-align: middle;
 }
 .pic_link > div {
