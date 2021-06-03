@@ -159,6 +159,9 @@ nav a {
 	nav > ul, .nlogo {
 		display: none;
 	}
+	.link_box {
+		display: none;
+	}
 }
 
 /* portlate */
@@ -318,6 +321,11 @@ body.open {
 	padding: 10% 0 0 5%;
 	box-sizing: border-box;
 	font-size: 4vw;
+	background-color: rgba(255, 255, 255, .4);
+}
+.pic_links {
+	height: auto;
+	overflow: hidden;
 }
 .pic_link {
 	display:  block;
@@ -327,26 +335,44 @@ body.open {
 }
 .pic_link > img {
 	width: 100%;
-	/*max-height: 25vh;*/
 	object-fit: cover;
 	vertical-align: middle;
 }
 .pic_link > div {
 	width: 100%;
-	background-color: yellow;
+	background-color: lightgray;
 	box-sizing: border-box;
 	font-family: 'Rafale';
+	color: black;
+	/*float: left;*/
 }
+
 @media (orientation: landscape){
 	/* 横長 */
 	.pic_link {
-		width: calc(100% / 3);
-		border-style: solid;
-		border-color: white;
-		border-width: .5vw;
+		width: calc(100% / 3 - 1vw);
+		margin: .5vw;
 	}
 	.pic_link > div {
 		padding: 2vh 1vw 2vh 1vw;
-		font-size: 3vh;
+		font-size: 4vh;
+	}
+}
+@media (orientation: portrait) {
+	/* 縦長 */
+	.pic_links {
+		width: 90%;
+		margin: 15vh auto 10vh auto;
+	}
+	.pic_link {
+		width: 100%;
+		margin-bottom: 5vh;
+	}
+	.pic_link > img {
+		max-height: 30vh;
+	}
+	.pic_link > div {
+		padding: 2vw 3vw;
+		font-size: 5vw;
 	}
 }
