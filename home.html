@@ -3,152 +3,218 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon">
-	<title>Document</title>
+	<link rel="shortcut icon" href="svg/logo.svg" type="image/svg+xml">
+	<link rel="stylesheet" href="css/nav.css">
+	<script type="text/javascript" src="js/nav.js"></script>
+	<title>Home</title>
 </head>
-<body>
-	<nav>
-		<ul>
-			<li><a href="home.html" accesskey="H"><img src="png/koyo_high_logo01.png" alt=""></a></li>
-			<li><a href="#" accesskey="M">Map</a></li>
-			<li><a href="#" accesskey="T">Timetable</a></li>
-			<li><a href="#" accesskey="S">School View</a></li>
-			<li><a href="#" accesskey="I">Information</a></li>
-		</ul>
-	</nav>
-	<a href="#" accesskey="H"><div class="hdtitle"></div></a>
-	<a href="#" accesskey="M" style="color: rgb(255, 255, 255);"><div class="hdmap">Map</div></a>
-	<a href="#" accesskey="T"><div class="hdtimet">Timetable</div></a>
-	<a href="#" accesskey="S"><div class="hdsview">School View</div></a>
-	<a href="#" accesskey="I" style="color: rgb(255, 255, 255);"><div class="hdinfo">Information</div></a>
-	<div class="hdboothes">
-		<span href="#" class="hdat" style="">Booth</span>
-		<a href="#"><div class="booth"><div class="trgle">生物部</div></div></a>
-		<a href="#"><div class="booth"><div class="trgle">化学部</div></div></a>
-		<a href="#"><div class="booth"><div class="trgle">音楽部</div></div></a>
-		<a href="#"><div class="booth"><div class="trgle">アンサンブル部</div></div></a>
-		<a href="#"><div class="booth"><div class="trgle">写真部</div></div></a>
-		<a href="#"><div class="booth"><div class="trgle">グリー部</div></div></a>
-		<a href="#"><div class="booth"><div class="trgle">文藝部</div></div></a>
-		<a href="#"><div class="booth"><div class="trgle">写真部</div></div></a>
-		<a href="#"><div class="booth"><div class="trgle">地歴部</div></div></a>
-		<a href="#"><div class="booth"><div class="trgle">美術部</div></div></a>
-		<a href="#"><div class="booth"><div class="trgle">将棋部</div></div></a>
-		<a href="#"><div class="booth"><div class="trgle">天文部</div></div></a>
-		<a href="#"><div class="booth"><div class="trgle">E.S.S.</div></div></a>
+<body onload="firstscript();">
+	<!-- 読み込み中 -->
+	<div class="morphing">
+  		<div class="word">Koyo</div>
+  		<div class="word">School</div>
+  		<div class="word">Festival</div>
+  		<div class="word">Onten</div>
 	</div>
+
+	<nav class="nav up">
+		<img class="nlogo" src="svg/logo.svg" alt="" style="height: 45px; float: left; margin: 9.5px 2.5% 9.5px 2%;">
+		<ul>
+			<li><a>Home</a></li>
+			<li><a onclick="linkShow('map')">Map <img class="trg hide" id="trg_map" src="svg/sankaku.svg"></a></li>
+			<li><a onclick="linkShow('time')">Timetable <img class="trg hide" id="trg_time" src="svg/sankaku.svg"></a></a></li>
+			<li><a href="#">School View</a></li>
+			<li><a href="#">Information</a></li>
+			<li><a onclick="linkShow('booth')">Booth <img class="trg hide" id="trg_booth" src="svg/sankaku.svg"></a></li>
+		</ul>
+
+		<img class="ham" src="svg/ham01.svg" alt="" onclick="open_menu()">
+	</nav>
+
+	<!-- landのリンク -->
+	<div onclick="linkShow(false)" class="blur hide"></div>
+
+	<div class="link_box hide" id="Lmap">
+		<div class="box_image" style="background-image: url(img/kokokosha1.jpg);"></div>
+	</div>
+	<div class="link_box hide" id="Ltime">
+		<div class="box_image" style="background-image: url(img/kokokosha2.jpg);"></div>
+		<div class="box_links">
+			<a href="#" class="box_link">タイムテーブル</a>
+			<a href="#" class="box_link">音楽会</a>
+			<a href="#" class="box_link">中央ステージ</a>
+			<a href="#" class="box_link">バンド</a>
+			<a href="#" class="box_link">展示</a>
+		</div>
+	</div>
+	<div class="link_box hide" id="Lbooth">
+		<div class="box_image" style="background-image: url(img/kokokosha1.jpg);"></div>
+		<div class="box_links">
+			<div class="box_link" onclick="childShow('bukatu')">部活展示</div>
+			<div class="box_link" onclick="childShow('kikaku')">音展企画</div>
+		</div>
+		<div class="child hide" id="child_bukatu">
+			<a href="">化学部</a>
+			<a href="">生物部</a>
+		</div>
+		<div class="child hide" id="child_kikaku">
+			<a href="">展示</a>
+		</div>
+	</div>
+
+	<!-- portのリンク -->
+	<div class="menu_port" id="menu_L">
+		<ul>
+			<li>
+				<a href="home.html">
+					<span class="li_e">Home</span>
+					<hr class="li_bar">
+					<span class="li_j">ホーム</span>
+				</a>
+			</li>
+			<li>
+				<div onclick="port_link_child('map')">
+					<span class="li_e">Map</span>
+					<hr class="li_bar">
+					<span class="li_j">校内マップ</span>
+					<img class="li_trg" id="trg_li_map" src="svg/sankaku.svg">
+				</div>
+			</li>
+			<div class="ul_div close" id="ul_div_map">
+				<a href="">南校舎1階</a>
+				<a href="">南校舎2階</a>
+				<a href="">北校舎1階</a>
+			</div>
+			<li>
+				<a href="">
+					<span class="li_e">Timetable</span>
+					<hr class="li_bar">
+					<span class="li_j">タイムテーブル</span>
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<span class="li_e">School View</span>
+					<hr class="li_bar">
+					<span class="li_j">スクールビュー</span>
+				</a>
+			</li>
+			<li>
+				<div class="div_booth" onclick="port_link_child('booth')">
+					<span class="li_e">Booth</span>
+					<hr class="li_bar">
+					<span class="li_j">団体</span>
+					<img class="li_trg" id="trg_li_map" src="svg/sankaku.svg">
+				</div>
+			</li>
+			<div class="ul_div close" id="ul_div_booth">
+				<a href="">生物部</a>
+				<a href="">化学部</a>
+				<a href="">物理部</a>
+				<a href="">美術部</a>
+				<a href="">写真部</a>
+				<a href="">カジノ</a>
+				<a href="">鉄道同好会</a>
+				<a href="">将棋部</a>
+				<a href="">クイズ同好会</a>
+			</div>
+			<li>
+				<a href="" style="border: 0;">
+					<span class="li_e">Information</span>
+					<hr class="li_bar">
+					<span class="li_j">お知らせ</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+
+	<!-- contents -->
+	<div class="title_box">
+		<img class="t_pic" src="img/kokokosha1.jpg" alt="">
+		<div class="pic_word">
+			甲陽学院高校<br>
+			第74回 音楽と展覧の会
+		</div>
+	</div>
+
+	<div class="pic_links">
+		<a class="pic_link" href="#">
+			<img src="img/kokokosha1.jpg" alt="">
+			<div>Map</div>
+		</a>
+		<a class="pic_link" href="#">
+			<img src="img/kokokosha2.jpg" alt="">
+			<div>Timetable</div>
+		</a>
+		<a class="pic_link" href="#">
+			<img src="img/3d_model.png" alt="">
+			<div>SchoolView</div>
+		</a>
+	</div>
+
+	<div style="width: 100%; height: 50vh; background-color: blue;"></div>
 </body>
 <style type="text/css">
+	html, body {
+		height: 100%;
+		margin: unset;
+		font-family: serif;
+		background-color: ghostwhite;
+	}
 	@font-face {
 		font-family: 'Rafale';
 		src: url(fonts/Rafale-BG.otf);
 	}
-	html, body {
-		height: 100%;
-		margin: unset;
-		font-family: 'Rafale';
+	/* morphing */
+	.morphing {
+  		position: relative;
+  		font-size: 120px;
+  		background-color: black;
+  		color: white;
+  		height: 100%;
+  		width: 100%;
+  		filter: contrast(20) blur(1px);
+  		z-index: 100;
 	}
-	nav {
-		width: 100%;
-		height: 44px;
-		background-color: rgba(51, 51, 51, .99);
-		position: fixed;
-		z-index: 2;
+	.morphing.loaded {
+		display: none;
 	}
-	nav ul {
-		width: 80%;
-		margin: 0 auto;
-		overflow: hidden;
-		list-style: none;
-		padding: unset;
+	.word {
+  		position: absolute;
+  		top: 50%;
+  		left: 50%;
+  		transform: translate(-50%, -50%);
+  		animation: word 12s infinite ease-in-out;
 	}
-	nav li {
-		width: 20%;
-		height: 44px;
-		float: left;
-		text-align: center;
+	.word:nth-child(1) {
+  		animation-delay: -12s;
 	}
-	nav a {
-		color: rgb(214, 214, 214);
-		text-decoration: none;
-		font-size: 16px;
-		line-height: 44px;
-		display: block;
+	.word:nth-child(2) {
+  		animation-delay: -10s;
 	}
-	nav img {
-		box-sizing: border-box;
-		height: 44px;
-		border: 10px solid rgba(255, 255, 255, 0);
+	.word:nth-child(3) {
+  		animation-delay: -8s;
 	}
-
-	.hdtitle {
-		width: 55%;
-		height: 90%;
-		float: left;
-		box-sizing: border-box;
-		border: .4vw solid white;
-		margin-top: 44px;
-    	background: rgb(251, 251, 253) 50% 80% / contain no-repeat url(png/koyo_high00.png);
+	.word:nth-child(4) {
+  		animation-delay: -6s;
 	}
-	.hdmap, .hdtimet, .hdinfo, .hdboothes, .hdsview {
-		color: rgb(29, 29, 31);
-		font-size: 3.5vw;
-		box-sizing: border-box;
-		border: .4vw solid white;
-		float: left;
-		padding: 1vw;
+	.word:nth-child(5) {
+  		animation-delay: -4s;
 	}
-	.hdmap {
-		width: 22.5%;
-		height: 45%;
-		background-color: rgb(0, 0, 0);
-		margin-top: 44px;
-		color: rgb(255, 255, 255);
-	}
-	.hdtimet {
-		width: 22.5%;
-		height: 45%;
-		background-color: rgb(251, 251, 253);
-		margin-top: 44px;
-	}
-	.hdinfo {
-		width: 100%;
-		height: 70%;
-		background-color: rgb(0, 0, 0);
-		color: rgb(255, 255, 255);
-	}
-	.hdboothes {
-		width: 100%;
-		height: 80%;
-		background-color: rgb(251, 251, 253);
-	}
-	.hdsview {
-		width: 45%;
-		height: 45%;
-		background-color: rgb(251, 251, 253);
-	}
-	.hdat {
-		display: block;
-		margin-bottom: 2vh;
-	}
-	.trgle {
-		height: 8vw;
-		width: 12.9vw;
-    	background: linear-gradient(to top left, rgba(255,255,255,0) 50%, blue 51%);
-    	color: orange;
-    	line-height: 3vw;
-    	font-size: 20px;
-    	position: absolute;
-    	padding: 3px;
-	}
-	.booth {
-		width: calc(100% / 7);
-		height: 15vw;
-		background-color: green;
-		box-sizing: border-box;
-		position: relative;
-		border: .3vw solid white;
-		float: left;
+	@keyframes word {
+  		0%, 10%, 100% {
+    		filter: blur(0px);
+    		opacity: 1;
+  		}
+  		20%, 80% {
+    		filter: blur(1em);
+    		opacity: 0;
+  		}
 	}
 </style>
+<script>
+	function firstscript() {
+		document.querySelector('.morphing').classList.add('loaded');
+	}
+</script>
 </html>
