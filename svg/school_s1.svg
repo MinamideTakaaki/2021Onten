@@ -1,6 +1,7 @@
 <svg width="1000" height="1000" viewBox="0, 0, 1000, 1000" xmlns="http://www.w3.org/2000/svg">
 	<defs>
 		<g id="stairs">
+			<line class="border" x1="0" x2="0" y1="0" y2="95"></line>
 			<line class="border_str" x1="1" x2="35" y1="0" y2="0" />
 			<line class="border_str" x1="1" x2="70" y1="18" y2="18" />
 			<line class="border_str" x1="1" x2="70" y1="36" y2="36" />
@@ -8,33 +9,29 @@
 			<line class="border_str" x1="1" x2="70" y1="72" y2="72" />
 			<line class="border_str" x1="1" x2="70" y1="96" y2="96" />
 			<line class="border_str" x1="35" x2="35" y1="0" y2="72" />
+			<line class="border" x1="70" x2="70" y1="0" y2="95"></line>
+		</g>
+
+		<g id="shoes_box">
+			<rect x="0" y="0" width="80" height="15" fill="rgb(180, 180, 180)"></rect>
+			<rect x="0" y="30" width="80" height="15" fill="rgb(180, 180, 180)"></rect>
+			<rect x="0" y="60" width="80" height="15" fill="rgb(180, 180, 180)"></rect>
 		</g>
 	</defs>
 
 	<line class="border" x1="0" x2="980" y1="2" y2="2" />
 	<!-- 上のborder -->
-	<line class="border" x1="0" x2="0" y1="0" y2="35" />
+	<line class="border" x1="0" x2="0" y1="0" y2="131" />
 	<!-- 左のborder -->
-	<!-- <rect class="border" x="980" width="2" height="35" /> -->
-	<line class="border" x1="980" x2="980" y1="0" y2="35" />
+	<line class="border" x1="980" x2="980" y1="0" y2="131" />
 	<!-- 右のborder -->
-	<rect class="corridor" x="2" y="2" width="978" height="33" fill="gray" />
-	<!-- 廊下 -->
-	<rect class="class_room_s4" x="1" width="140" />　
-	<rect class="class_room_s4" x="141" width="70" />
-	<!-- <rect class="stairs" x="211" width="70">
-
-	</rect> -->
+	<line class="border" x1="0" x2="980" y1="132" y2="132" />
 	<use transform="matrix(1,0,0,1,0,0)" href="#stairs" x="211" y="36"></use>
 	<!-- 西階段 -->
-	<rect class="class_room_s4" x="281" width="140" />
-	<rect class="class_room_s4" x="421" width="140" />
-	<rect class="class_room_s4" x="561" width="140" />
+	<use transform="matrix(1,0,0,1,0,0)" href="#shoes_box" x="320" y="36"></use>
 	<use transform="matrix(1,0,0,1,0,0)" href="#stairs" x="701" y="36"></use>
 	<!-- 東階段 -->
-	<rect class="class_room_s4" x="771" width="70" />
-	<rect class="class_room_s4" x="841" width="140" />
-	<!-- 教室 -->
+
 
 <style>
 	.border {
