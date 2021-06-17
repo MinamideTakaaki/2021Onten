@@ -13,7 +13,7 @@ export * from "./MotionPathPlugin.js";
 export * from "./PixiPlugin.js";
 export * from "./ScrollToPlugin.js";
 export * from "./ScrollTrigger.js";
-export * from "./TextPlugin.js"; 
+export * from "./TextPlugin.js";
 
 //BONUS EXPORTS
 //export * from "./CustomEase.js";
