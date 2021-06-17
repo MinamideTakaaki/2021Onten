@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script type="text/javascript" src="gsap/all.js"></script>
+	<title>GSAP_TEST</title>
+</head>
+<body>
+	<header></header>
+
+	<script>
+		const tween = gsap.to("header", {
+    		duration: 0.5, // アニメーションの時間
+  			paused: true, // 勝手にアニメーションが始まらないように
+  			ease: "power2.out", // イージング
+  			// アニメーションの終点
+  			top: 0
+  			// width: 100%,
+  			// background-color: blue,
+		});
+
+		document.querySelector("header").addEventListener("click", tween.play())
+	</script>
+	<style>
+		html, body {
+			margin: unset;
+			height: 100%;
+		}
+		header {
+			top: 0;
+    		width: 50%;
+    		height: 10vh;
+    		background-color: green;
+		}
+	</style>
+</body>
+</html>
