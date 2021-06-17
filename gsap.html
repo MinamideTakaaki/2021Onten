@@ -22,7 +22,10 @@
   			backgroundColor: "blue"
 		});
 
-		document.querySelector("header").addEventListener("click", tween.play());
+		document.querySelector("header").addEventListener("click", function() {
+			tween.play();
+			console.log("click");
+		});
 	</script>
 	<style>
 		html, body {
