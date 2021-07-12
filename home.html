@@ -8,14 +8,7 @@
 	<script type="text/javascript" src="js/nav.js"></script>
 	<title>Home | 音楽と展覧の会</title>
 </head>
-<body onload="firstscript();">
-	<!-- 読み込み中 -->
-	<div class="morphing">
-  		<div class="word">Koyo</div>
-  		<div class="word">School</div>
-  		<div class="word">Festival</div>
-  		<div class="word">Onten</div>
-	</div>
+<body>
 
 	<nav class="nav up">
 		<img class="nlogo" src="svg/logo.svg" alt="" style="height: 45px; float: left; margin: 9.5px 2.5% 9.5px 2%;">
@@ -140,7 +133,8 @@
 	<div class="pic_links">
 		<a class="pic_link" href="#">
 			<img src="img/kokokosha1.jpg" alt="">
-			<div>Map</div>
+			<div class="pl_t">Map</div>
+			<div class="pl_c">あああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ</div>
 		</a>
 		<a class="pic_link" href="#">
 			<img src="img/kokokosha2.jpg" alt="">
@@ -156,6 +150,7 @@
 	<img src="img/onten2021_logo.png" alt="" style="width: 30%; height: 60%; object-fit: cover;">
 	<div style="width: 100%; height: 50vh; background-color: blue;"></div>
 </body>
+
 <style type="text/css">
 	html, body {
 		height: 100%;
@@ -166,52 +161,6 @@
 	@font-face {
 		font-family: 'Rafale';
 		src: url(fonts/Rafale-BG.otf);
-	}
-	/* morphing */
-	.morphing {
-  		position: relative;
-  		font-size: 120px;
-  		background-color: black;
-  		color: white;
-  		height: 100%;
-  		width: 100%;
-  		filter: contrast(20) blur(1px);
-  		z-index: 100;
-	}
-	.morphing.loaded {
-		display: none;
-	}
-	.word {
-  		position: absolute;
-  		top: 50%;
-  		left: 50%;
-  		transform: translate(-50%, -50%);
-  		animation: word 12s infinite ease-in-out;
-	}
-	.word:nth-child(1) {
-  		animation-delay: -12s;
-	}
-	.word:nth-child(2) {
-  		animation-delay: -10s;
-	}
-	.word:nth-child(3) {
-  		animation-delay: -8s;
-	}
-	.word:nth-child(4) {
-  		animation-delay: -6s;
-	}
-	.word:nth-child(5) {
-  		animation-delay: -4s;
-	}
-	@keyframes word {
-  		0%, 10%, 100% {
-    		filter: blur(0px);
-    		opacity: 1;
-  		}
-  		20%, 80% {
-    		filter: blur(1em);
-    		opacity: 0;
-  		}
 	}
 </style>
 <script>

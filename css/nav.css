@@ -336,13 +336,18 @@ body.open {
 	object-fit: cover;
 	vertical-align: middle;
 }
-.pic_link > div {
+.pic_link > .pl_t {
 	width: 100%;
+	display: block;
 	background-color: lightgray;
 	box-sizing: border-box;
 	font-family: 'Rafale';
 	color: black;
 	/*float: left;*/
+}
+.pic_link > .pl_c {
+	background-color: lightgray;
+	font-size: 10px;
 }
 
 @media (orientation: landscape){
