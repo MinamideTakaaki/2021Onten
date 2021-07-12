@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<script type="module" src="gsap/all.js"></script>
+	<script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>where_ideas_begin</title>
+</head>
+<body>
+	<svg class="intro" viewbox="0 0 200 86">
+	 	<text text-anchor="start" x="10" y="30" class="text text-stroke" clip-path="url(#text1)">Where</text>
+  			<text text-anchor="start" x="10" y="50" class="text text-stroke" clip-path="url(#text2)">Ideas</text>
+  			<text text-anchor="start" x="10" y="70" class="text text-stroke" clip-path="url(#text3)">Begin.</text>
+  			<text text-anchor="start" x="10" y="30" class="text text-stroke text-stroke-2" clip-path="url(#text1)">Where</text>
+  			<text text-anchor="start" x="10" y="50" class="text text-stroke text-stroke-2" clip-path="url(#text2)">Ideas</text>
+  			<text text-anchor="start" x="10" y="70" class="text text-stroke text-stroke-2" clip-path="url(#text3)">Begin.</text>
+  			<defs>
+    		<clipPath id="text1">
+	      		<text text-anchor="start" x="10" y="30" class="text">Where</text>
+    		</clipPath>
+    		<clipPath id="text2">
+	      		<text text-anchor="start" x="10" y="50" class="text">Ideas</text>
+    		</clipPath>
+    		<clipPath id="text3">
+	      		<text text-anchor="start" x="10" y="70" class="text">Begin.</text>
+    		</clipPath>
+  		</defs>
+	</svg>
+
+	<style>
+	body {
+     	height: 100vh;
+  		padding: 0;
+  		margin: 0;
+  		background: #4a2667;
+	}
+
+	svg.intro {
+  		background: linear-gradient(135deg, #aa3bb1, #582a7e);
+  		max-width: 800px;
+  		position: absolute;
+  		top: 50%;
+  		left: 50%;
+  		transform: translate(-50%, -50%);
+  		box-shadow: 0 30px 50px -20px #2e0642;
+	}
+	svg.intro .text {
+  		display: none;
+	}
+	svg.intro.go .text {
+  		font-family: Arial, sans-serif;
+  		font-size: 20px;
+  		text-transform: uppercase;
+  		display: block;
+	}
+	svg.intro.go .text-stroke {
+  		fill: none;
+  		stroke: #51256f;
+  		stroke-width: 2.8px;
+  		stroke-dashoffset: -900;
+  		stroke-dasharray: 900;
+  		stroke-linecap: butt;
+  		stroke-linejoin: round;
+  		animation: dash 2.5s ease-in-out forwards;
+	}
+	svg.intro.go .text-stroke:nth-child(2) {
+  		animation-delay: 0.3s;
+	}
+	svg.intro.go .text-stroke:nth-child(3) {
+  		animation-delay: 0.9s;
+	}
+	svg.intro.go .text-stroke-2 {
+  		stroke: #f6bdfa;
+  		animation-delay: 1.2s;
+	}
+	svg.intro.go .text-stroke:nth-child(5) {
+  		animation-delay: 1.5s;
+	}
+	svg.intro.go .text-stroke:nth-child(6) {
+  		animation-delay: 1.8s;
+	}
+
+	@keyframes dash {
+  		100% {
+    		stroke-dashoffset: 0;
+  		}
+	}
+	</style>
+
+	<script type="module">
+
+		// import { gsap } from "./gsap/all.js"; // なんかいるらしい
+
+		$(function() {
+	    	$('.intro').addClass('go');
+		})
+	</script>
+</body>
+</html>

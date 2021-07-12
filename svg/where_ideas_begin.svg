@@ -1,0 +1,19 @@
+<svg width="1000" height="1000" viewBox="0, 0, 1000, 1000" xmlns="http://www.w3.org/2000/svg">
+	<text text-anchor="start" x="10" y="30" class="text text-stroke" clip-path="url(#text1)">Where</text>
+  		<text text-anchor="start" x="10" y="50" class="text text-stroke" clip-path="url(#text2)">Ideas</text>
+  		<text text-anchor="start" x="10" y="70" class="text text-stroke" clip-path="url(#text3)">Begin.</text>
+  		<text text-anchor="start" x="10" y="30" class="text text-stroke text-stroke-2" clip-path="url(#text1)">Where</text>
+  		<text text-anchor="start" x="10" y="50" class="text text-stroke text-stroke-2" clip-path="url(#text2)">Ideas</text>
+  		<text text-anchor="start" x="10" y="70" class="text text-stroke text-stroke-2" clip-path="url(#text3)">Begin.</text>
+  		<defs>
+    	<clipPath id="text1">
+      		<text text-anchor="start" x="10" y="30" class="text">Where</text>
+    	</clipPath>
+    	<clipPath id="text2">
+      		<text text-anchor="start" x="10" y="50" class="text">Ideas</text>
+    	</clipPath>
+    	<clipPath id="text3">
+      		<text text-anchor="start" x="10" y="70" class="text">Begin.</text>
+    	</clipPath>
+  	</defs>
+</svg>
