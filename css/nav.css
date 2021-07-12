@@ -347,7 +347,6 @@ body.open {
 }
 .pic_link > .pl_c {
 	background-color: lightgray;
-	font-size: 10px;
 }
 
 @media (orientation: landscape){
@@ -368,9 +367,12 @@ body.open {
 		width: calc(100% / 3 - 1vw);
 		margin: .5vw;
 	}
-	.pic_link > div {
+	.pic_link > .pl_t {
 		padding: 2vh 1vw 2vh 1vw;
 		font-size: 4vh;
+	}
+	.pic_link > .pl_c {
+		font-size: 2vh;
 	}
 }
 @media (orientation: portrait) {
